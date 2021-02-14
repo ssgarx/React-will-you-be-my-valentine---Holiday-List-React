@@ -47,9 +47,9 @@ class App extends Component {
     var newList = [...indianLocations, ...otherLocations];
     return (
       <div id="main">
-        <ul>
+        <ol>
           {newList.map((item, index) => <li key={`location${index}`}>{item.name}</li>)}
-        </ul>
+        </ol>
       </div>
     )
   }
