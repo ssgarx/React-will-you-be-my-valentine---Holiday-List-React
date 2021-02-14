@@ -42,14 +42,10 @@ class App extends Component {
     let indianLocations = this.cityList.filter((item, index) => {
       return item.country == 'India'
     })
-    let otherLocations = this.cityList.filter((item, index) => {
-      return item.country !== 'India'
-    })
-    let newList = [...indianLocations, ...otherLocations];
     return (
       <div id="main">
         <ol>
-          {newList.map((item, index) => <li key={`location${index + 1}`}>{item.name}</li>)}
+          {indianLocations.map((item, index) => <li key={`location${index + 1}`}>{item.name}</li>)}
         </ol>
       </div>
     )
